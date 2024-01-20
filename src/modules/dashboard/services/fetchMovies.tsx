@@ -1,4 +1,4 @@
-const fetch = require('node-fetch');
+// import fetch from "node-fetch";
 const fetchTrendingMovies = async () => {
 
 const url = 'https://api.themoviedb.org/3/trending/all/day?language=en-US';
@@ -15,6 +15,7 @@ try {
 
     const response = await fetch(url, options);
     const data = await response.json();
+    
     return data.results;
   } catch (error) {
     console.error(error);
