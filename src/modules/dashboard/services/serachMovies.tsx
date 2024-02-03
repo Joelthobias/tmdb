@@ -4,7 +4,7 @@ interface SearchResult {
     title: string;
   }
   
-  export const searchMovies = async (query: string): Promise<SearchResult[]> => {
+  export const searchMovies = async (query: number): Promise<SearchResult[]> => {
     const url = `https://api.themoviedb.org/3/search/movie?query=${query}&page=1`;
     const options = {
       method: 'GET',

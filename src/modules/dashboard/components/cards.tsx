@@ -16,7 +16,7 @@ function Cards({ movieData }: CardsProps) {
     const router = useRouter();
 
     const handleOnClick = (id: number) => {
-        router.push('/movie/[id]', `/movie/${id}`);
+        router.push('/details/[id]', `/details/${id}`);
     };
 
     return (
@@ -33,7 +33,7 @@ function Cards({ movieData }: CardsProps) {
                             src={`https://image.tmdb.org/t/p/w500/${movie.poster_path}`}
                         />
                         <div className={style.cardbody}>
-                            <h3>{movie.title}</h3>
+                            <h3>{movie.title ? movie.title:"------------"}</h3>
                             <p>Rating : {movie.vote_average}</p>
                         </div>
                     </div>
